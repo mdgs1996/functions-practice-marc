@@ -16,7 +16,14 @@
 
 // Your code goes here...
 
-
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+  for (let val of arr) {
+    if (val2 > val && val > val1) {
+      return true;
+    }
+  }
+  return false;
+}
 
 
 /**
@@ -36,8 +43,38 @@
 
 // Your code goes here...
 
+// Named Function
+function getValueWithConditionOne(num1, num2) {
+  var sum = num1 + num2;
+  
+  if (num1 == 40 && num2 == 40) {
+    return sum;
+  } else {
+    return sum * 2;
+  }
+}
 
+// Arrow Function
+const getValueWithConditionTwo = (num1, num2) => {
+  var sum = num1 + num2;
+  
+  if (num1 == 40 && num2 == 40) {
+    return sum;
+  } else {
+    return sum * 2;
+  }
+}
 
+// Variable name for the function expression
+const getValueWithConditionThree = function (num1, num2) {
+  var sum = num1 + num2;
+  
+  if (num1 == 40 && num2 == 40) {
+    return sum;
+  } else {
+    return sum * 2;
+  }
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
